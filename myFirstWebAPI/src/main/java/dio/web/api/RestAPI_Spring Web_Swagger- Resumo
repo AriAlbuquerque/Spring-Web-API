@@ -1,0 +1,65 @@
+
+    ********** Spring Boot Web: é um módulo do Spring Boot que fornece uma estrutura para desenvolver aplicativos web em Java de maneira rápida e fácil;
+     Ele usa a arquitetura MVC (Model-View-Controller) e inclui várias bibliotecas e recursos para ajudar no desenvolvimento web, como o Spring Web MVC,
+     que é uma implementação do padrão MVC, o Spring Data, que fornece uma maneira fácil de interagir com bancos de dados, e o Spring Security, que ajuda a proteger
+     o aplicativo web contra ameaças de segurança;
+     O Spring Boot Web também inclui um servidor embutido, ou seja não é necessário configurar um servidor separado para executar seu aplicativo;
+     Tudo isso torna o desenvolvimento de aplicativos web em Java com o Spring Boot Web muito mais fácil e rápido.
+
+     * API(Interface Application Program) --> Interface de Programação de Aplicativos, refere-se a um conjunto de regras, protocolos e ferramentas que são usados para criar
+     e interagir com softwares e sistemas de forma programática;
+     Uma API é uma forma padronizada e estruturada de permitir que diferentes aplicativos tenham comunicação entre si, permitindo que eles compartilhem dados e funcionalidades;
+     APIs são comumente usadas para integrar sistemas, permitir que aplicativos de terceiros acessem dados e recursos de um aplicativo, ou para criar serviços web que possam ser acessados pela internet;
+      As APIs são essenciais para a comunicação entre diferentes sistemas e aplicativos, permitindo a criação de soluções complexas e integradas;
+
+     * REST (Representational State Transfer) --> É um estilo arquitetural que define um conjunto de restrições para criar serviços web escaláveis e interoperáveis;
+      É baseado no protocolo HTTP e utiliza seus métodos (GET, POST, PUT, DELETE) para realizar operações em recursos;
+      A estrutura de uma API REST consiste em endpoints, que são as URLs acessadas pelos clientes para realizar operações em recursos;
+      Os endpoints são compostos por um verbo HTTP e um caminho que representa o recurso a ser manipulado;
+      Além disso, uma API REST utiliza os códigos de status HTTP para indicar o resultado da operação;
+      Uma API REST pode ser consumida por qualquer aplicação que utilize o protocolo HTTP e possa entender os formatos de dados suportados pela API, geralmente JSON e XML;
+      Também é comum que uma API REST exija autenticação e autorização para proteger seus recursos;
+      Para projetar uma API REST, é importante seguir as práticas recomendadas, como usar nomes de recursos significativos, criar rotas hierárquicas, fornecer documentação clara e seguir as convenções do HTTP;
+      Além disso, é importante considerar questões de segurança, escalabilidade e desempenho ao projetar uma API REST.
+
+     * RESTfull --> Abordagem para projetar APIs baseadas em REST, seguindo as práticas recomendadas e as restrições impostas pela arquitetura REST;
+      Uma API RESTful deve ser baseada em recursos, que são identificados por URLs únicas;
+      Os clientes podem realizar operações em recursos através dos métodos HTTP (GET, POST, PUT, DELETE) e os resultados são indicados pelos códigos de status HTTP;
+      Para seguir as práticas recomendadas, uma API RESTful deve usar nomes de recursos significativos, fornecer uma documentação clara, seguir as convenções do HTTP;
+      Fornecer suporte para autenticação e autorização. Além disso, a API deve ser projetada para ser escalável, segura e ter bom desempenho.
+      Ao projetar uma API RESTful, é importante evitar violar as restrições da arquitetura REST, como a falta de estado do servidor e a utilização de operações não idempotentes;
+      A adoção de uma abordagem RESTful pode tornar as APIs mais fáceis de usar, entender e integrar com outras aplicações;
+
+           Em sumo: A API REST é como um guia de boas práticas e RESTful é a capacidade de determinado sistema aplicar os princípios de REST;
+
+      * Para que uma arquitetura seja RESTful, é necessário ter uma série de princípios ou padrões:
+
+            ºcliente-servidor--> significa aprimorar a portabilidade entre várias plataformas de interface do usuário e do servidor, permitindo uma evolução independente do sistema;
+
+            ºinterface uniforme--> representa uma interação uniforme entre cliente-servidor, para isso é preciso de uma interface que identifique e represente recursos, mensagens autodescritivas, bem como hypermedia (HATEOAS);
+
+            ºstatelless--> indica que cada interação via API tem acesso a dados completos e compreensíveis;
+
+            ºcache--> necessário para reduzir o tempo médio de resposta, melhorara a eficiência, desempenho e escalabilidade da comunicação;
+
+            ºcamadas--> permite que a arquitetura seja menos complexa e altamente flexível;
+
+
+      * Nível de maturidade: Para padronizar e facilitar o desenvolvimento de APIs REST Leonard Richardson propôs um modelo de maturidade para esse tipo de API, definido em 4 níveis:
+               Glory of REST: (GET, POST, PUT, DELETE);
+
+                    Level 0--> Ausência de Regras, nível mais básico implementa todos os recursos pois não segue nenhum padrão(Verbo único, nomes sem padrão);
+
+                    Level 1--> Aplicação de Resources, os nomes dos recursos foram equalizados e para não gerar ambiguidadeé necessário definir um verbo apropriadamente EX: /users/1;
+
+                    Level 2--> Implementação de Verbos HTTP, após a definição ter sido requisitada no nível 1 o nível 2 se encarrega de validar a aplicabilidade dos verbos para finalidades específicas como:
+                                GET--> Retorna Dados;
+                                POST--> Grava Dados;
+                                PUT--> Altera Dados;
+                                DELETE--> Remove Dados;
+                      Sendo o nível 2 o mais explorado por APIs no mercado;
+
+                    Level 3--> HATEOAS(Hypermedia as the Engine of Application State), uma API que implementa esse nível fornece aos seus clientes LINKS que indicarão como poderá ser feita a navegação entre seus recursos;
+                    Ou seja, quem for consumir a API precisará saber apenas a rota principal e a resposta dessa requisição terá todas as demais rotas possíveis;
+                    Sendo o nível 3 é o menos explorado, muitas APIs existentes no mercado não implementsm esse método;
+
