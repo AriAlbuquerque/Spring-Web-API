@@ -11,21 +11,33 @@ import java.util.List;
 public class UserController {
     @Autowired
     private UserRepository respository;
+
     @GetMapping("/users")
-    public List<User> getUsers(){
-    return respository.findAll();
+    public List<User> getUsers() {
+
+        return respository.findAll();
     }
+
     @GetMapping("/users/{username}")
-    public User getOne(@PathVariable("username") String username){
-        return  respository.findByUsername(username);
+    public User getOne(@PathVariable("username") String username) {
+
+        return respository.findByUsername(username);
     }
+
     @DeleteMapping
-    public void delete(@PathVariable("id") Integer id){
+    public void delete(@PathVariable("id") Integer id) {
         respository.deleteById(id);
     }
+
     @PostMapping("/users")
-    public void postUser(@RequestBody User user){
-    respository.save(user);
+    public void postUser(@RequestBody User user) {
+
+        respository.save(user);
+    }
+
+    @PutMapping()
+    public void putUset(@RequestBody User user) {
+        respository.save(user);
     }
 
 }

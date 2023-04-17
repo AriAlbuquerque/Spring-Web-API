@@ -63,3 +63,41 @@
                     Ou seja, quem for consumir a API precisará saber apenas a rota principal e a resposta dessa requisição terá todas as demais rotas possíveis;
                     Sendo o nível 3 é o menos explorado, muitas APIs existentes no mercado não implementsm esse método;
 
+      * Controller --> Recurso que disponibiliza as funcionalidades de negócio da aplicação através do protocolo HTTP:
+
+             @RestController --> Responsável por designar o bean de compoment que suporta requisições HTTP com base na arquitetura REST;
+             @RequestMapping(prefixo) -->Determina qual URI comum para todos os recursos disponibilizados pelo Controller;
+             @GetMapping --> Detrminna que o método aceitará requisições HTTP e do tipo GET;
+             @PostMapping --> Detrminna que o método aceitará requisições HTTP e do tipo POST;
+             @PutMapping --> Detrminna que o método aceitará requisições HTTP e do tipo PUT;
+             @DeleteMapping --> Determina que o método aceitará requisições HTTP e do tipo DELETE;
+             @RequestBody --> Converte um JSON para o tipo do objeto esperado como parâmetro no método;
+             @PathVariabel --> Consegue determinar que parte da URI será composta por parâmetros recebidos nas requisições;
+
+             URI --> URI é uma sigla para Identificador de Recursos Uniforme (em inglês, Uniform Resource Identifier) e em Spring Boot é possível trabalhar com URI utilizando a classe:
+              java.net.URI.
+              A classe URI representa um identificador de recursos na forma de uma string. Ela pode ser utilizada para identificar recursos na web, como páginas da web, serviços web, arquivos, entre outros.
+              Para criar uma URI em Spring Boot, podemos utilizar o construtor da classe URI passando uma string com o endereço do recurso que desejamos identificar. Exemplo:
+
+                     URI uri = new URI("https://www.exemplo.com/pagina1");
+
+
+              ********** Swagger: É uma linguagem de descrição de interface que descreve APIs RESTful expressas usando JSON;
+                     é uma ferramenta de software que permite a descrição e documentação de APIs RESTful em um formato padronizado e legível
+                     por máquina e humano, facilitando a compreensão e uso de APIs por desenvolvedores e usuários;
+                     O Swagger é composto por um conjunto de especificações de API, incluindo o OpenAPI (anteriormente conhecido como Swagger Specification)
+                     que é uma linguagem de descrição de API para descrever RESTful APIs em um formato legível por máquina e humano;
+
+
+              * Exception Handlers --> O tratamento de exceções responsável pelo tratamento da ocorrência de condições que alteram o fluxo normal na execução de aplicações;
+              Manipulador de exceções é o código que estipula que um programa fará quando um evento anômalo interromper o fluxo normal das instruções desse programa;
+
+              @Controller -->
+              @ExceptionHandler -->
+              @ResponseStatus -->
+              @ControllerAdvice -->
+
+              * timestamp:
+              * status:
+              * statusCode:
+              * error:
